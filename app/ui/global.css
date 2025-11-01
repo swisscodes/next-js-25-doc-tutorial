@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @font-face {
+  font-family: Inter;
+  src: url(../../public/assets/fonts/Inter-VariableFont_opsz\,wght.woff2) format(woff2);
+  font-weight: 100 1000;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(../../public/assets/fonts/Inter-Italic-VariableFont_opsz\,wght.woff2) format(woff2);
+  font-weight: 100 1000;
+  font-style: italic;
+
+  we dont need anymore because we did this in layout.tsx
+  const InterFont = localFont({
+  src: [
+    {
+      path: '../public/assets/fonts/Inter-VariableFont_opsz\,wght.woff2',
+      style: 'normal',
+      weight:"100 1000"
+    },
+    {
+      path: '../public/assets/fonts/Inter-Italic-VariableFont_opsz\,wght.woff2',
+      style: 'italic',
+    },
+  ],
+  fallback: [
+    "Verdana",
+  ]
+});
+
+} */
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* body {
+  font-family: 'Inter', sans-serif;
+} 
+  we dont need anymore bcoz nexj js did for us in the layout 
+  with  <html lang="en" className={InterFont.className}>
+*/  
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+/* all media elements set to block and full width */
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  inline-size: 100%;
+}
+
+@media screen and (min-width: 465px) {
+  .test-ratio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    img {
+      object-fit: contain;
+    }
+  }
+}
+
+
