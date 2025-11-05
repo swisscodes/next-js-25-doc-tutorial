@@ -1,4 +1,5 @@
 'use client'
+import { Suspense } from 'react';
 import {
   UserGroupIcon,
   HomeIcon,
@@ -23,6 +24,7 @@ export default function NavLinks() {
   const pathname = usePathname();
   return (
     <>
+    <Suspense>
       {links.map((link) => {
         const LinkIcon = link.icon;
         return (
@@ -36,6 +38,7 @@ export default function NavLinks() {
           </Link>
         );
       })}
+      </Suspense>
     </>
   );
 }
