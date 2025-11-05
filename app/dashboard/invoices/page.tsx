@@ -13,7 +13,7 @@ export default async function Page(props: {searchParams?:
     page?: string;
   }>;
 }) {
-
+  
   const searchParams = await props.searchParams;
   const query = searchParams?.query || '';
   const currentPage = Number(searchParams?.page) || 1;
